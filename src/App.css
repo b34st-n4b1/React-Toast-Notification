@@ -1,0 +1,267 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background: #f8f9fa;
+  color: rgb(138, 136, 136);
+  line-height: 1.5;
+  font-size: 0.875rem;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: 0.1rem;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 0.875rem;
+}
+p {
+  color: rgb(106, 134, 160);
+}
+@media screen and (min-width: 800px) {
+  h2 {
+    font-size: 2.5rem;
+    line-height: 1;
+  }
+  body {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .section {
+    width: 95vw;
+  }
+}
+
+/* Navbar */
+nav {
+  background: #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.nav-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.nav-toggle {
+  font-size: 1.5rem;
+  color: rgb(26, 52, 92);
+  background: transparent;
+  border-color: transparent;
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+.nav-toggle:hover {
+  color: rgb(185, 176, 176);
+}
+.logo {
+  height: 40px;
+}
+.links a {
+  color: rgb(42, 68, 99);
+  font-size: 1rem;
+  text-transform: capitalize;
+  letter-spacing: 0.1rem;
+  display: block;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s linear;
+}
+.links a:hover {
+  background: rgba(34, 23, 73, 0.867);
+  color: rgba(91, 107, 143, 0.867);
+  padding-left: 1.5rem;
+}
+
+.links-container {
+  height: 0;
+  overflow: hidden;
+  transition: all 0.3s linear;
+}
+.show-container {
+  height: 10rem;
+}
+
+/* footer */
+.footer {
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(33, 22, 59);
+}
+.main-section {
+  width: 100%;
+  height: 76.5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn {
+  width: 130px;
+  height: 40px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  outline: none;
+  background: rgb(6, 14, 131);
+  background: linear-gradient(
+    0deg,
+    rgba(6, 14, 131, 1) 0%,
+    rgba(12, 25, 180, 1) 100%
+  );
+  border: none;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.form .input-form {
+  width: 20rem;
+  height: 2rem;
+  border-radius: 4px;
+  padding-left: 10px;
+  margin-bottom: 20px;
+}
+.btn:hover {
+  background: rgb(0, 3, 255);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 3, 255, 1) 0%,
+    rgba(2, 126, 251, 1) 100%
+  );
+}
+
+/* Toast Notification */
+
+.toast-wrapper {
+  position: fixed;
+  bottom: 12%;
+  /* left: 40%; */
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 300px;
+}
+@keyframes fadeAnimate {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.toast-container.exit {
+  animation: fadeOut 350ms ease;
+}
+.toast-container {
+  padding: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  background-color: aquamarine;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 999;
+  animation: fadeAnimate 350ms ease;
+
+  /* display: none; */
+}
+.times-icon {
+  color: #000;
+}
+
+@media screen and (min-width: 800px) {
+  .nav-center {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+  .nav-header {
+    padding: 0;
+  }
+  .nav-toggle {
+    display: none;
+  }
+  .links-container {
+    height: auto !important;
+  }
+  .links {
+    display: flex;
+  }
+  .links a {
+    padding: 0;
+    margin: 0 0.5rem;
+  }
+  .links a:hover {
+    padding: 0;
+    background: transparent;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .toast-wrapper {
+    left: 30%;
+    transform: translate(15%, 0);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .toast-wrapper {
+    left: 30%;
+    transform: translate(0, 0);
+  }
+}
+@media screen and (max-width: 600px) {
+  .toast-wrapper {
+    left: 30%;
+    transform: translate(-15%, 0);
+  }
+}
