@@ -7,7 +7,6 @@ const FirstComp = (props) => {
   const dispatch = useContext(ToastContext);
 
   let count = 0;
-  let currentTime = new Date().ge;
   const addNewToast = () => {
     dispatch({
       type: "ADD_TOAST",
